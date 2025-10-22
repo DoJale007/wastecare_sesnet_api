@@ -5,9 +5,9 @@ from enum import StrEnum
 
 
 class UserRole(StrEnum):
-    USER = "user"
-    BUILDER = "builder"
-    SUPPLIER = "supplier"
+    ADMIN = "admin"
+    ENTERPRISE = "enterprise"
+    CUSTOMER = "customer"
 
 
 def has_roles(roles: List[UserRole]):

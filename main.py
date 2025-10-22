@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from routes.users import users_router
+from routes.public import public_router
+from routes.enterprises import enterprises_router
+from routes.admin import admin_router
 import cloudinary
 import os
 from dotenv import load_dotenv
@@ -33,3 +36,6 @@ def read_root():
 
 # Plugging routers into main.py
 app.include_router(users_router)
+app.include_router(admin_router)
+app.include_router(enterprises_router)
+app.include_router(public_router)
